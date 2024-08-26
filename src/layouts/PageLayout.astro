@@ -29,11 +29,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="flex min-h-screen w-full flex-col">
-        <div class="max-w-screen-2xl mx-auto">
+	<body>
+        <div class="flex min-h-screen w-full flex-col">
             <Header client:load/>
-            <div class="px-4 md:px-6">
-                <slot />
+            <div class="px-4 md:px-6 grow-1 flex-1">
+                	<slot />
             </div>
             <Footer />
         </div>

@@ -1,8 +1,9 @@
 ---
+layout: '../../layouts/BlogPost.astro'
 title: 'Markdown Style Guide'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
-pubDate: 'Jul 01 2022'
-heroImage: '/blog-placeholder-1.jpg'
+pubDate: 2023-04-01
+author: 'Astro Learner'
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
@@ -64,13 +65,13 @@ The blockquote element represents content that is quoted from another source, op
 #### Syntax
 
 ```markdown
-> Don't communicate by sharing memory, share memory by communicating.<br>
+> Don't communicate by sharing memory, share memory by communicating.
 > — <cite>Rob Pike[^1]</cite>
 ```
 
 #### Output
 
-> Don't communicate by sharing memory, share memory by communicating.<br>
+> Don't communicate by sharing memory, share memory by communicating.
 > — <cite>Rob Pike[^1]</cite>
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.

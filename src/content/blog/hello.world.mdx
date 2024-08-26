@@ -1,0 +1,36 @@
+---
+layout: '../../layouts/BlogPost.astro'
+title: 'Hello, World!'
+pubDate: 2023-04-01
+description: 'This is my first blog post using Astro and MDX.'
+author: 'Astro Learner'
+image:
+    url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
+    alt: 'The Astro logo with the word One.'
+tags: ["astro", "blogging", "learning in public"]
+---
+import { Code } from 'astro/components';
+
+# Welcome to my MDX-powered Astro blog!
+
+This is my first post on my new blog. I'm excited to use **Astro** and *MDX* together!
+
+## Code Example
+
+Here's a simple React component:
+
+<Code code={`
+function Greeting({ name }) {
+  return <h1>Hello, {name}!</h1>;
+}
+`} lang="jsx" />
+
+## Markdown Features
+
+We can use all the standard Markdown features like:
+
+- Lists
+- [Links](https://astro.build)
+- *Italic* and **Bold** text
+
+And much more!
