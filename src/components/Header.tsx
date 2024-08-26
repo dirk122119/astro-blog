@@ -29,7 +29,9 @@ export default function Header() {
                     <div className="flex items-center gap-4 md:ml-auto md:gap-2 lg:gap-4 grow-0">
                         <ModeToggle />
                         <Button variant="ghost" size="icon">
-                            <Github className="className=h-[1.2rem] w-[1.2rem] fill-dark dark:fill-white" />
+                            <a href="https://github.com/dirk122119">
+                                <Github className="className=h-[1.2rem] w-[1.2rem] fill-dark dark:fill-white" />
+                            </a>
                         </Button>
                     </div>
             </header>
