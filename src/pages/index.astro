@@ -2,10 +2,11 @@
 import { getCollection } from 'astro:content';
 import PageLayout from '@/layouts/PageLayout.astro';
 import { PostCard } from '@/components/PostCard';
-
-const posts = (await getCollection('blog')).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+import { type CollectionEntry } from 'astro:content';
+type Props = CollectionEntry<'blog'>;
+const posts = (await getCollection('blog'))
+.sort( (a: Props, b: Props) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+).filter((post: Props) => !post.data.draft);
 ---
 <PageLayout>
 	<div class="chart-wrapper mx-auto flex max-w-6xl flex-col flex-wrap items-start justify-center gap-6 p-6 sm:flex-row sm:p-8">

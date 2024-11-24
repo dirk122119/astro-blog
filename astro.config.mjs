@@ -4,8 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import remarkToc from 'remark-toc';
-import remarkGfm from 'remark-gfm';
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,13 +12,21 @@ export default defineConfig({
     remarkPlugins: [remarkToc]
   },
   site: 'https://example.com',
-  integrations: [mdx(), sitemap(), tailwind({
-    applyBaseStyles: false
-  }), react()],
-  output: "hybrid",
+  integrations: [
+    mdx(),
+    sitemap(),
+    tailwind({
+      applyBaseStyles: false
+    }),
+    react()
+  ],
+  output: "server",
   adapter: vercel({
     webAnalytics: {
       enabled: true,
     },
-  })
+  }),
+  legacy:{
+    collections: true
+  }
 });

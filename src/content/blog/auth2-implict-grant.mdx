@@ -1,0 +1,30 @@
+---
+layout: '../../layouts/BlogPost.astro'
+title: 'OAuth2.0 Implicit Grant'
+pubDate: 2024-08-31
+description: 'This is span example of OAuth2.0 Implicit Grant'
+image:
+    url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
+    alt: 'The Astro logo with the word One.'
+tags: ["OAuth2.0"]
+draft: false
+---
+## 註冊憑證
+到[Google API Console](https://console.developers.google.com/?hl=zh-tw)註冊OAuth2.0憑證
+
+## 在應用程式端發http請求
+```
+https://accounts.google.com/o/oauth2/v2/auth?
+response_type=token&client_id=${yourClientId}&
+redirect_uri=${yourRedirectUri}&
+scope=${authrieScope}
+```
+## 回傳的請求
+```
+http://127.0.0.1:3000/callback#access_token=ya29.a0AcM612xDtsHzT-KAuFoRwt3XiFFXnYnssx5wRAO4cV_EoNhFfaYv4H4-RvAYIOLhGRRTHpnkXlO7nR1Kd5jH_FxrunS5MQb_ajZmyGMBdHe_k0XoDlcVt6f0foHlq-I1ReogMChuwS7Tw_v5tGUJmgoaV7NowS_bywaCgYKAfMSARMSFQHGX2MiISle4RR7kFBjZcxh2RdBHA0169&
+token_type=Bearer&
+expires_in=3598&
+scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.profile%20https://www.googleapis.com/auth/userinfo.email&
+authuser=0&
+prompt=none
+```
